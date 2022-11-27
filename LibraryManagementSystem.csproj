@@ -6,4 +6,20 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="BootStrap\**" />
+    <Content Remove="BootStrap\**" />
+    <EmbeddedResource Remove="BootStrap\**" />
+    <None Remove="BootStrap\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Home\Component.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\DataTables\css\jquery.dataTables.min.css" />
+    <None Include="wwwroot\DataTables\js\jquery.dataTables.min.js" />
+  </ItemGroup>
+
 </Project>
