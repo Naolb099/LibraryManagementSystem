@@ -21,7 +21,7 @@
                     <div class="row">
                         <div class="col">
                             <center>
-                                <h4>Log In</h4>
+                                <h4>Sign Up</h4>
                             </center>
                         </div>
                     </div>
@@ -32,25 +32,91 @@
                         </div>
                     </div>
 
-                    <div>
-                        <form>
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Member ID</label>
-                                <input type="text" class="form-control" placeholder="Member Id" id="exampleInputText">
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Password</label>
-                                <input type="password" class="form-control" placeholder="Password" id="exampleInputPassword1">
+                    <form>
+                        <!--Row 1-->
+
+                        <div id="row"  class="row">
+                            <div class="col-md-6">
+                                <div>
+                                    <label for="exampleInputText" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" placeholder="Full Name" id="exampleInputText">
+                                </div>
                             </div>
 
-                            <button type="submit" class="btn-success">Log In</button>
-                            <button type="submit" class="btn-primary" asp-controller="SignUp" asp-action="Index">Sign Up</button>
-                        </form>
-                    </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label for="exampleInputDate" class="form-label">Birth Date</label>
+                                    <input type="date" class="form-control" placeholder="Birth Date" id="exampleInputDate">
+                                </div>
+                            </div>
 
+                        </div>
+
+
+                        <!--Row 2-->
+                        <div id ="row" class="row">
+                            <div class="col-md-6">
+                                <div>
+                                    <label for="exampleInputNumber" class="form-label">Mobile Number</label>
+                                    <input type="number" class="form-control" placeholder="mobile number" id="exampleInputNumber">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div>
+                                    <label for="exampleInputEmail" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" placeholder="email address" id="exampleInputEmail">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!--Row 3-->
+                        <div id ="row" class="row">
+                            <div class="col-md-4">
+                                <div>
+                                    <label for="State" class="form-label"> State</label>
+                                  
+                                    <select name="cars" id="cars">
+                                      <option value="volvo">Volvo</option>
+                                      <option value="saab">Saab</option>
+                                      <option value="mercedes">Mercedes</option>
+                                      <option value="audi">Audi</option>
+                                    </select>
+                 
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div>
+                                    <label for="exampleInputEmail" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" placeholder="email address" id="exampleInputEmail">
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div>
+                                    <label for="exampleInputEmail" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" placeholder="email address" id="exampleInputEmail">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="carousel-control-next-icon">
+                            <div class="col-md-6">
+                                <button type="submit" class="btn-success">Register</button>
+                            </div>
+                          
+                        </div>
+                    </form>
+
+                    
                 </div>
             </div>
-
+    
         </div>
+
     </div>
 </div>
