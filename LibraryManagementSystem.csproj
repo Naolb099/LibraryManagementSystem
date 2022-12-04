@@ -20,6 +20,9 @@
   <ItemGroup>
     <None Include="wwwroot\DataTables\css\jquery.dataTables.min.css" />
     <None Include="wwwroot\DataTables\js\jquery.dataTables.min.js" />
+    <None Include="wwwroot\img\js\bootstrap.min.js" />
+    <None Include="wwwroot\img\js\jquery-3.3.1.slim.min.js" />
+    <None Include="wwwroot\img\js\popper.min.js" />
   </ItemGroup>
 
   <ItemGroup>

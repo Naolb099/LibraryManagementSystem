@@ -17,6 +17,15 @@ body {
   margin-bottom: 60px;
 }
 
-#row {
+#butt {
+    width:auto;
+}
+#row{
     margin-bottom: 10px;
 }
+
+#space {
+    margin-bottom: 30px;
+
+}
+   
