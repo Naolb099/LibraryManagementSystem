@@ -1,0 +1,159 @@
+﻿<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            
+                            <center>
+                                <img height="100" width="100" src="~/img/bissueicn.jpg" />
+                            </center>
+                        </div>
+                    </div>
+
+                    <div class="row"> 
+                        <div class="col">
+                            <center>
+                                <h5>Issue Book</h5>
+                                <!--
+                                        <span>Profile Status - </span>
+                                    <label asp-for="Your" class="badge badge-pill badge-info" id="vrfLabel"> </label>
+                                -->
+                            </center>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <hr />
+                        </div>
+                    </div>
+
+                    <form>
+                        <!--Row 1-->
+
+                        <div id="row" class="row">
+                            <div class="col-md-6">
+                                <div>
+                                    <label for="userName" class="form-label">User Name</label>
+                                    <input type="text" class="form-control" placeholder="User Name" id="userName" />
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="bookID" class="form-label">Book ID</label>
+                                <div class="form-group">
+                                    <div class="input-group">
+
+                                        <input type="text" class="form-control" placeholder="Book ID" id="bookID">
+                                        <button type="submit" class="btn-dark" width="70">Search</button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!--row 2-->
+
+                        <div id="row" class="row">
+                            <div class="col-md-6">
+                                <div>
+                                    <label for="userName" class="form-label">Member Name</label>
+                                    <input type="text" class="form-control" placeholder="Member Name" id="userName" readonly />
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="bookName" class="form-label">Book Name</label>
+                                <div class="form-group">
+                                    <div class="input-group">
+
+                                        <input type="text" class="form-control" placeholder="Book Name" id="bookName" readonly>
+                                      
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!--row 3-->
+
+                        <div id="row" class="row">
+                            <div class="col-md-6">
+                                <div>
+                                    <label for="date" class="form-label">Issue Date</label>
+                                    <input type="date" class="form-control" placeholder=" " id="date"/>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div>
+                                    <label for="date" class="form-label">Return Date</label>
+                                    <input type="date" class="form-control" placeholder="" id="date">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!--row 4-->
+                        <div class="row">
+
+                            <div class="col-md-6  container-fluid" id="butt">
+                                <button type="submit" class="btn-success">Issue Book</button>
+                            </div>
+
+                            <div class="col-md-6 container-fluid" id="butt" width = "100%">
+                                <button type="submit" class="btn-primary" width = 100% >Return Book</button>
+                            </div>
+
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <!--Column 2-->
+        <div class="col-md-6">
+            <div class="card">
+
+                <div class="card-body">
+
+                    <div class="row">
+                        <div class="col">
+                            <center>
+                                <img height="100" width="100" src="~/img/bookicon.png" />
+                                <h5>List of issued books</h5>
+                            </center>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <hr />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <asp:GridView class="table table-bordered"> </asp:GridView>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
