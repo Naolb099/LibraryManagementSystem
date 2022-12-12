@@ -13,10 +13,17 @@ namespace LibraryManagementSystem.Controllers
             _user = user;
         }
 
-        public IActionResult Index()
+        public IActionResult UserIndex()
         {
             return View();
         }
+
+        // Log In
+        public IActionResult LogIndex()
+        {
+            return View();
+        }
+
         //GET
         public IActionResult SignUp()
         {

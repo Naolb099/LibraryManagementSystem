@@ -1,17 +1,24 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using LibraryManagementSystem.Data;
+using Microsoft.AspNetCore.Mvc;
 
 namespace LibraryManagementSystem.Controllers
 {
     public class AdminController : Controller
     {
-        public IActionResult Publisher()
+        private readonly AppDbContext _admin;
+        public AdminController(AppDbContext admin)
+        {
+            _admin = admin;
+        }
+
+        public IActionResult Index()
+        {
+            return View();
+        }
+        public IActionResult ManageMember()
         {
             return View();
         }
 
-        public IActionResult AuthorIndex()
-        {
-            return View();
-        }
     }
 }

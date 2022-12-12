@@ -12,7 +12,7 @@ namespace LibraryManagementSystem.Data
         
         public DbSet<Books> Books { get; set; }
         public DbSet<User> Users { get; set; }
-        //public DbSet<Member> Members { get; set; }
+        public DbSet<Admin> Adminss { get; set; }
 
      
     }
