@@ -1,221 +1,51 @@
-﻿
+﻿@model IEnumerable<Books>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@if (TempData["Success"] != null)
+{
+    <h3>@TempData["Success"]</h3>
+}
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-6">
+
+        <!--Column 1-->
+        <div class="col-md-12">
             <div class="card">
 
                 <div class="card-body">
+
                     <div class="row">
                         <div class="col text-center">
                             <img height="100" width="100" src="/img/bookicon.png" />
                         </div>
                     </div>
-                    <br />
-                    <div class="row">
-                        <div class="col text-center">
-                            <h4>Book Details</h4>
-                        </div>
-                    </div>
-
-                    <br /><br />
-
-                    <form>
-                        <!--Row 1-->
-                        <div class="input-group mb-3">
-                            <div class="input-group">
-                                <input type="file" class="form-control" id="inputGroupFile01">
-                                <label class="form-label" for="inputGroupFile01"></label>
-                            </div>
-                        </div>
-
-                        <!--Row 1b-->
-                        <div id="rowB" class="row">
-
-                            <div class="col-md-5">
-                                <label for="BookID" class="form-label">Book ID</label>
-                                <input type="text" class="form-control" placeholder="Book ID" id="BookID">
-                            </div>
-
-                            <div class="col-md-7">
-                                <div>
-                                    <label for="userName" class="form-label">Book Name</label>
-                                    <input type="text" class="form-control" placeholder="Book Name" id="userName" />
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!--row 2-->
-
-                        <div id="row" class="row">
-                            <div class="col-md-5">
-                                <div>
-                                    <label for="exampleInputText" class="form-label">Author Name</label>
-                                    <input type="text" class="form-control" placeholder="Author Name" id="exampleInputText3" />
-                                </div>
-                            </div>
-                            <div class="col-md-7">
-                                <div>
-                                    <label for="userName" class="form-label">Publisher Name</label>
-                                    <input type="text" class="form-control" placeholder="Publisher Name" id="exampleInputText" />
-                                </div>
-                            </div>
-
-
-
-                        </div>
-                        <!--row 2b-->
-
-
-                        <div id="row" class="row">
-
-                            <div class="col-md-4">
-                                <label for="exampleInputText" class="form-label">Language</label>
-                                <select name="Genre" id="inputGroupSelect02">
-                                    <option selected>Select</option>
-                                    <option value="1">English</option>
-                                    <option value="2">French</option>
-                                    <option value="3">Arabic</option>
-                                    <option value="4">Afan Oromo</option>
-                                    <option value="5">Amharic</option>
-                                </select>
-
-                            </div>
-
-                            <div class="col-md-4">
-                                <label for="exampleInputText" class="form-label">Genre</label>
-                                <select name="Genre" id="inputGroupSelect03">
-                                    <option selected>Select</option>
-                                    <option value="1">Fiction</option>
-                                    <option value="2">Non Fiction</option>
-                                    <option value="3">Drama</option>
-                                    <option value="4">Poetry</option>
-                                    <option value="5">Folk Tale</option>
-                                </select>
-
-                            </div>
-                            <div class="col-md-4">
-                                <div>
-                                    <label for="exampleInputDate2" class="form-label">Published Date</label>
-                                    <input type="Date" class="form-control" placeholder="Publisher" id="exampleInputDate2" />
-                                </div>
-                            </div>
-
-
-                        </div>
-
-
-                        <!--row 3-->
-
-                        <div id="row" class="row">
-
-                            <div class="col-md-4">
-                                <div>
-                                    <label for="text" class="form-label">Edition</label>
-                                    <input type="text" class="form-control" placeholder="Edition" id="exampleInputText03" />
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <label for="exampleInputNumber01" class="form-label">Price/Unit</label>
-                                <input type="number" class="form-control" placeholder="Price in $" id="exampleInputNumber01">
-                            </div>
-
-                            <div class="col-md-4">
-                                <label for="number" class="form-label">Page</label>
-                                <input type="number" class="form-control" placeholder="Page" id="exampleInputNumber02">
-                            </div>
-
-
-                        </div>
-
-                        <!--row 3-->
-
-                        <div id="row" class="row">
-
-                            <div class="col-md-4">
-                                <div>
-                                    <label for="text" class="form-label">Stock</label>
-                                    <input type="number" class="form-control" placeholder="Stock" id="exampleInputNumber04" />
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <label for="text" class="form-label">Available Stock</label>
-                                <input type="number" class="form-control" placeholder="Available Stock" id="exampleInputNumber05" readonly>
-                            </div>
-
-                            <div class="col-md-4">
-                                <label for="number" class="form-label">Issued Stock</label>
-                                <input type="number" class="form-control" placeholder="Issued Stock" id="exampleInputNumber06" readonly>
-                            </div>
-
-
-                        </div>
-
-                        <!--row 3-->
-
-                        <div id="row" class="row">
-
-                            <div class="col-md-12">
-                                <div>
-                                    <label for="" class="form-label">About the book:</label>
-                                    <textarea id="ex10" rows="3" cols="65"></textarea>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <!--row 4 button-->
-                        <div class="row">
-
-                            <div class="col-md-4">
-                                <a asp-controller="Books" asp-action="Index" class="btn btn-success">Add Book</a>
-                            </div>
-
-                            <div class="col-md-4 ">
-                                <a asp-controller="Books" asp-action="Index" class="btn btn-warning">Update Book</a>
-                                <!--button type="submit" class="btn-warning btn-group-lg">Update Book</!--button-->
-                            </div>
-
-                            <div class="col-md-4  container-fluid" id="buttn1">
-                                <a asp-controller="Books" asp-action="Index" class="btn btn-danger">Delete Book</a>
-                            </div>
-
-                        </div>
-                    </form>
-
-
-                </div>
-            </div>
-
-        </div>
-
-        <!--Column 2-->
-        <div class="col-md-6">
-            <div class="card">
-
-                <div class="card-body">
 
                     <div class="container p-3">
-                        <div class="">u
+                        <div class="">
                             <h3 class="text-dark text-center">Books in Inventory</h3>
                         </div>
                     </div>
 
                     <br /><br />
 
+                    @*@if (Model.Count() > 0)*@
+
                     <div class="row">
                         <div class="col">
                             <table class="table table-bordered table-striped ">
 
                                 <thead>
-                                    <tr>
+                                    <tr class="text-center">
                                         <th>Title</th>
                                         <th>Author Name</th>
                                         <th>Genre</th>
                                         <th>Edition</th>
                                         <th>Book Price</th>
+                                        <th>Language</th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -223,19 +53,36 @@
                                     {
                                         <tr>
                                             <td>
-                                                @obj.BookTittle.
+                                                @obj.BookTittle
                                             </td>
                                             <td>
                                                 @obj.AuthorName
                                             </td>
                                             <td>
-                                                @obj.BookGenre.
+                                                @obj.BookGenre
                                             </td>
                                             <td>
-                                                @obj.BookEdition.
+                                                @obj.BookEdition
                                             </td>
                                             <td>
-                                                @obj.BookPrice.
+                                                @obj.BookPrice
+                                            </td>
+
+                                            <td>
+                                                @obj.Language
+                                            </td>
+                                            <td>
+                                                <div class="text-center">
+                                                    <a asp-controller="Books" asp-action="Update" asp-route-id="@obj.BookId"
+                                                   class="btn btn-warning mx-2">
+                                                        Update
+                                                    </a>
+                                                    <a asp-controller="Books" asp-action="Delete" asp-route-id="@obj.BookId"
+                                                   class="btn btn-danger mx-2">
+                                                        Delete
+                                                    </a>
+                                                </div>
+
                                             </td>
                                         </tr>
                                     }
@@ -245,12 +92,22 @@
                         </div>
                     </div>
 
+
                 </div>
             </div>
+
+
+        </div>
+
+    </div>
+
+    <br />
+    <br />
+
+    <div class="row">
+        <div class="col-md-4">
+            <a asp-controller="Books" asp-action="AddBook" class="btn btn-success" style="width: fit-content"><i class="bi bi-plus-circle"></i> &nbsp; Add Book</a>
         </div>
 
     </div>
 </div>
-
-
-

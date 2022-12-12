@@ -1,0 +1,112 @@
+﻿@model User
+
+<form method="post">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card">
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col text-center">
+                                <img height="100" width="100" src="~/img/usricon.png" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col text-center">
+                                <h4>Sign Up</h4>
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <!--Row 1-->
+
+                        <div id="row" class="row">
+                            <div class="col-md-6">
+                                <div>
+                                    <label asp-for="FullName">Full Name</label>
+                                    <input asp-for="FullName" class="form-control" placeholder="Full Name" />
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div>
+                                    <label asp-for="Email">Email Address</label>
+                                    <input asp-for="Email" class="form-control" placeholder="Email Address" />
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!--Row 2-->
+
+                        <div id="row" class="row">
+                            <div class="col-md-6">
+                                <div>
+                                    <label asp-for="UserName">User Name</label>
+                                    <input asp-for="UserName" class="form-control" placeholder="User Name" />
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div>
+                                    <label asp-for="Password">Password</label>
+                                    <input asp-for="Password" class="form-control" placeholder="Password" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Row 3-->
+
+                        <div id="row" class="row">
+                            <div class="col-md-6">
+                                <div>
+                                    <label asp-for="MobilePhone">Phone Number</label>
+                                    <input asp-for="MobilePhone" class="form-control" placeholder="Phone Number" />
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div>
+                                    <label asp-for="City">City</label>
+                                    <input asp-for="City" class="form-control" placeholder="City" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Row 4-->
+
+                        <div id="row" class="row">
+                            <div class="col-md-6">
+                                <div>
+                                    <label asp-for="State">State</label>
+                                    <input asp-for="State" class="form-control" placeholder="State" />
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div>
+                                    <label asp-for="PostalCode">Postal Code</label>
+                                    <input asp-for="PostalCode" class="form-control" placeholder="Postal Code" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-control-next-icon">
+                        <div class="col-md-6">
+                            <button type="submit" class="btn-success">Register</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</form>

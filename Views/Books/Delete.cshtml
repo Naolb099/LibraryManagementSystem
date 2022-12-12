@@ -1,0 +1,152 @@
+﻿@model Books
+<form method="post" asp-action="Delete">
+    <div class="col-md-12">
+        <div class="card">
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="col text-center">
+                        <img height="100" width="100" src="/img/bookicon.png" />
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col text-center">
+                        <h2>Book Details</h2>
+                    </div>
+                </div>
+
+                <br /><br />
+
+                <!--Row 1b-->
+                <div id="rowB" class="row">
+
+                    <div class="col-md-5">
+                        <label asp-for="BookId">Book ID</label>
+                        <input asp-for="BookId" class="form-control" placeholder="Book ID" readonly />
+                    </div>
+
+                    <div class="col-md-7">
+                        <div>
+                            <label asp-for="BookTittle">Book Title</label>
+                            <input asp-for="BookTittle" class="form-control" placeholder="Book Title"  disabled/>
+                            <span asp-validation-for="BookTittle" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--row 2-->
+
+                <div id="row" class="row">
+                    <div class="col-md-5">
+                        <div>
+                            <label asp-for="AuthorName">Author Name</label>
+                            <input asp-for="AuthorName" class="form-control" placeholder="Author Name" disabled />
+                            <span asp-validation-for="AuthorName" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div>
+                            <label asp-for="PublisherName">Publisher Name</label>
+                            <input asp-for="PublisherName" class="form-control" placeholder="Publisher Name" disabled />
+                            <span asp-validation-for="PublisherName" class="text-danger"></span>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <!--row 2b-->
+
+
+                <div id="row" class="row">
+
+
+                    <div class="col-md-5">
+                        <div>
+                            <label asp-for="Language">Language</label>
+                            <input asp-for="Language" class="form-control" placeholder="Language" disabled />
+                            <span asp-validation-for="Language" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div>
+                            <label asp-for="BookGenre">Genre</label>
+                            <input asp-for="BookGenre" class="form-control" placeholder="Book Genre" disabled />
+                            <span asp-validation-for="BookGenre" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--row 3-->
+
+                <div id="row" class="row">
+
+                    <div class="col-md-6">
+                        <div>
+                            <label asp-for="BookEdition">Edition</label>
+                            <input asp-for="BookEdition" class="form-control" placeholder="Edition" disabled />
+                            <span asp-validation-for="BookEdition" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="BookPrice">Book Price</label>
+                        <input asp-for="BookPrice" class="form-control" placeholder="Book Price" disabled />
+                        <span asp-validation-for="BookPrice" class="text-danger"></span>
+                    </div>
+
+                </div>
+
+                <!--row 3-->
+
+                <div id="row" class="row">
+
+                    <div class="col-md-6">
+                        <div>
+                            <label asp-for="BookStock">Book Stock</label>
+                            <input asp-for="BookStock" class="form-control" placeholder="Book Stock" disabled />
+                            <span asp-validation-for="BookStock" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="AvailableStock">Available Stock</label>
+                        <input asp-for="AvailableStock" class="form-control" placeholder="Available Stock" disabled />
+                        <span asp-validation-for="AvailableStock" class="text-danger"></span>
+                    </div>
+
+
+                    <div>
+                        <br />
+                    </div>
+
+
+                    <div id="row" class="row">
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-danger" style="width: 150px">Delete</button>
+                        </div>
+
+                        <div class="col-md-4">
+                            <a asp-controller="Books" asp-action="Index" class="btn btn-secondary" style="width: 150px">
+                                Back to List
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</form>
+
+
+
+
+
