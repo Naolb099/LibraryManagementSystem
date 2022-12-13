@@ -18,70 +18,101 @@ namespace LibraryManagementSystem.Controllers
             return View();
         }
 
-        // Log In GET
+        // Log In
         public IActionResult LogIndex()
         {
             return View();
         }
 
+        //GET
+        public IActionResult SignUp()
+        {
+            return View();
+        }
+
+        // POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult SignUp(User obj)
+        {
+            _user.Users.Add(obj);
+            _user.SaveChanges();
+            return RedirectToAction("ManageMember", "Admin"); // redirect to Login Page
+        }
+
+
+        // Uodate a user
+
+        // GET
+        public IActionResult Update(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+
+
+            var userInList = _user.Users.Find(id);
+            if (userInList == null)
+            {
+                return NotFound();
+
+            }
+
+            return View(userInList);
+        }
+
+        // POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Update(User obj)
+        {
+            //if (_user.Users.Contains(obj))
+            //{
+            //    ModelState.AddModelError("The book {0} already exists!", obj.FullName);
+            //}
+
+            //  if (!ModelState.IsValid) return View(obj);
+
+            _user.Users.Update(obj);
+            _user.SaveChanges();
+            TempData["Success"] = "Book updated successfully";
+            return RedirectToAction("ManageMember", "Admin");
+
+        }
+
+        // Delete a single user
+        // GET
+        public IActionResult Delete(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+
+
+            var userInList = _user.Users.Find(id);
+            if (userInList == null)
+            {
+                return NotFound();
+
+            }
+
+            return View(userInList);
+        }
 
 
         // POST
-      //  [HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public IActionResult LogIndex(string username, string password)
-        //{
-        //    // Check if the username and password are empty
-        //    if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
-        //    {
-        //        // Return an error message
-        //        return View("Error", "Please enter a username and password");
-        //    }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Delete(User obj)
+        {
+            _user.Users.Remove(obj);
+            _user.SaveChanges();
+            TempData["Success"] = "Book deleted successfully";
+            return RedirectToAction("ManageMember", "Admin");
 
-        //    // Connect to the database
-        //    using (var db = new AppDbContext())
-        //    {
-        //        // Search for a user with the specified username
-        //        var user = db.Users.FirstOrDefault(u => u.UserName == username);
-
-        //        // Check if a user with the specified username was found
-        //        if (user == null)
-        //        {
-        //            // Return an error message
-        //            return View("Error", "Invalid username or password");
-        //        }
-
-        //        // Check if the password is correct
-        //        if (user.Password != password)
-        //        {
-        //            // Return an error message
-        //            return View("Error", "Invalid username or password");
-        //        }
-
-        //        // If the username and password are correct, log the user in
-        //        // (Add code here to set the user's authentication cookie)
-        //    }
-
-        //    // Redirect the user to the home page
-        //    return RedirectToAction("Index", "Home");
-        //}
-
-
-    //GET
-    public IActionResult SignUp()
-    {
-        return View();
-    }
-
-    // POST
-    [HttpPost]
-    [ValidateAntiForgeryToken]
-    public IActionResult SignUp(User obj)
-    {
-        _user.Users.Add(obj);
-        _user.SaveChanges();
-        return RedirectToAction("LogIndex"); // redirect to Login Page
-    }
+        }
 
     }
 }

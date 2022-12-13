@@ -2,6 +2,7 @@
 using LibraryManagementSystem.Data;
 using LibraryManagementSystem.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace LibraryManagementSystem.Controllers
 {
@@ -44,6 +45,7 @@ namespace LibraryManagementSystem.Controllers
 
         }
 
+        // GET
         public IActionResult Update(int? id)
         {
             if (id == null || id == 0)
@@ -109,7 +111,6 @@ namespace LibraryManagementSystem.Controllers
             return RedirectToAction("Index");
 
         }
-
 
     }
 }

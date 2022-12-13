@@ -1,4 +1,7 @@
 ﻿@model Books
+@{
+    ViewData["Title"] = "Update Book";
+}
 <form method="post" asp-action="Update">
     <div class="col-md-12">
         <div class="card">
@@ -21,12 +24,12 @@
                 <!--Row 1b-->
                 <div id="rowB" class="row">
 
-                    <div class="col-md-5">
+                    <div class="col-md-6">
                         <label asp-for="BookId">Book ID</label>
                         <input asp-for="BookId" class="form-control" placeholder="Book ID" readonly />
                     </div>
 
-                    <div class="col-md-7">
+                    <div class="col-md-6">
                         <div>
                             <label asp-for="BookTittle">Book Title</label>
                             <input asp-for="BookTittle" class="form-control" placeholder="Book Title" />
@@ -39,14 +42,14 @@
                 <!--row 2-->
 
                 <div id="row" class="row">
-                    <div class="col-md-5">
+                    <div class="col-md-6">
                         <div>
                             <label asp-for="AuthorName">Author Name</label>
                             <input asp-for="AuthorName" class="form-control" placeholder="Author Name" />
                             <span asp-validation-for="AuthorName" class="text-danger"></span>
                         </div>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-6">
                         <div>
                             <label asp-for="PublisherName">Publisher Name</label>
                             <input asp-for="PublisherName" class="form-control" placeholder="Publisher Name" />
@@ -63,14 +66,14 @@
                 <div id="row" class="row">
 
 
-                    <div class="col-md-5">
+                    <div class="col-md-6">
                         <div>
                             <label asp-for="Language">Language</label>
                             <input asp-for="Language" class="form-control" placeholder="Language" />
                             <span asp-validation-for="Language" class="text-danger"></span>
                         </div>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-6">
                         <div>
                             <label asp-for="BookGenre">Genre</label>
                             <input asp-for="BookGenre" class="form-control" placeholder="Book Genre" />

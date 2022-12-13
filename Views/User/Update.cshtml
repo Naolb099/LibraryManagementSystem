@@ -1,0 +1,141 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Update Book";
+}
+
+<form method="post" asp-action="Update">
+    <div class="col-md-12">
+        <div class="card">
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="col text-center">
+                        <img height="100" width="100" src="/img/bookicon.png" />
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col text-center">
+                        <h2>User Details</h2>
+                    </div>
+                </div>
+
+                <br /><br />
+
+                <!--Row 1b-->
+                <div id="rowB" class="row">
+
+                    <div class="col-md-6">
+                        <label asp-for="Id">User ID</label>
+                        <input asp-for="Id" class="form-control" placeholder="User ID" readonly />
+                    </div>
+
+                    <div class="col-md-6">
+                        <div>
+                            <label asp-for="UserName">User Name</label>
+                            <input asp-for="UserName" class="form-control" placeholder="User Name"/>
+                            <span asp-validation-for="UserName" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--row 2-->
+
+                <div id="row" class="row">
+                    <div class="col-md-6">
+                        <div>
+                            <label asp-for="FullName">Full Name</label>
+                            <input asp-for="FullName" class="form-control" placeholder="Full Name"/>
+                            <span asp-validation-for="FullName" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <label asp-for="Email">Email Address</label>
+                            <input asp-for="Email" class="form-control" placeholder="Email Address" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <!--row 2b-->
+
+
+                <div id="row" class="row">
+
+
+                    <div class="col-md-6">
+                        <div>
+                            <label asp-for="MobilePhone">Phone Number</label>
+                            <input asp-for="MobilePhone" class="form-control" placeholder="Phone Number"/>
+                            <span asp-validation-for="MobilePhone" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <label asp-for="City">City</label>
+                            <input asp-for="City" class="form-control" placeholder="City" />
+                            <span asp-validation-for="City" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--row 3-->
+
+                <div id="row" class="row">
+
+                    <div class="col-md-6">
+                        <div>
+                            <label asp-for="State">Edition</label>
+                            <input asp-for="State" class="form-control" placeholder="Edition"/>
+                            <span asp-validation-for="State" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="PostalCode">Postal Code</label>
+                        <input asp-for="PostalCode" class="form-control" placeholder="Postal Code"/>
+                        <span asp-validation-for="PostalCode" class="text-danger"></span>
+                    </div>
+
+                </div>
+
+                <!--row 3-->
+
+                <div id="row" class="row">
+
+                    <div>
+                        <br />
+                    </div>
+
+
+                    <div id="row" class="row">
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-warning" style="width: 150px">Update</button>
+                        </div>
+
+                        <div class="col-md-4">
+                            <a asp-controller="Admin" asp-action="ManageMember" class="btn btn-secondary" style="width: 150px">
+                                Back to List
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</form>
+
+
+
+
+
