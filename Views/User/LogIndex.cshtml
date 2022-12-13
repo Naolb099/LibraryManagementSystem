@@ -1,4 +1,4 @@
-﻿
+﻿@model User
 <div class="container">
     <div class="row">
         <div class="col-md-6 mx-auto">
@@ -21,25 +21,23 @@
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col">
-                            <hr />
-                        </div>
-                    </div>
+                    <br />
+                    <br />
 
                     <div>
-                        <form>
+                        <form asp-controller="User" asp-action="LogIndex" method="post">
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">User Name</label>
-                                <input type="text" class="form-control" placeholder="User Name" id="exampleInputText">
+                                <label asp-for="Email" class="form-label">User Name</label>
+                                <input asp-for="Email" class="form-control" placeholder="User Name" />
                             </div>
                             <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Password</label>
-                                <input type="password" class="form-control" placeholder="Password" id="exampleInputPassword1">
+                                <label asp-for="Password" class="form-label">Password</label>
+                                <input asp-for="Password" class="form-control" placeholder="Password" id="exampleInputPassword1">
                             </div>
-
-                            <button type="submit" class="btn-success" asp-controller="" asp-action="">Log In</button>
-                            <button type="submit" class="btn-primary" asp-controller="User" asp-action="SignUp">Sign Up</button>
+                            <button type="submit" class="btn btn-success" style="width: 100px">Log In</button>
+                            <a asp-controller="User" asp-action="SignUp" class="btn btn-primary" style="width: 100px">
+                                Sign Up
+                            </a>
                         </form>
                     </div>
 

@@ -1,4 +1,5 @@
 ﻿using LibraryManagementSystem.Data;
+using LibraryManagementSystem.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LibraryManagementSystem.Controllers
@@ -17,7 +18,19 @@ namespace LibraryManagementSystem.Controllers
         }
         public IActionResult ManageMember()
         {
+            IEnumerable<User> userList = _admin.Users;
+            return View(userList);
+        }
+
+        public IActionResult Search(string searchText = "")
+        {
+
+            if(string.IsNullOrWhiteSpace(searchText))
+            {
+
+            }
             return View();
+
         }
 
     }
