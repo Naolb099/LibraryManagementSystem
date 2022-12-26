@@ -1,0 +1,50 @@
+﻿@model User
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card">
+
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <center>
+                                <img height="100" width="100" src="~/img/usricon.png" />
+                            </center>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <center>
+                                <h4>Log In</h4>
+                            </center>
+                        </div>
+                    </div>
+
+                    <br />
+                    <br />
+
+                    <div>
+                        <form asp-controller="User" asp-action="LogIndex" method="post">
+                            <div class="mb-3">
+                                <label asp-for="Email" class="form-label">User Name</label>
+                                <input asp-for="Email" class="form-control" placeholder="User Name" />
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="Password" class="form-label">Password</label>
+                                <input asp-for="Password" class="form-control" placeholder="Password" id="exampleInputPassword1">
+                            </div>
+                            <button type="submit" class="btn btn-success" style="width: 100px">Log In</button>
+                            <a asp-controller="User" asp-action="SignUp" class="btn btn-primary" style="width: 100px">
+                                Sign Up
+                            </a>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+            <a class="nav-link text-black" asp-area="" asp-controller="Admin" asp-action="Index">Admin Log In</a>
+        </div>
+
+    </div>
+</div>
