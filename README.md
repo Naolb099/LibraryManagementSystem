@@ -14,7 +14,18 @@ Once you have the required software installed, follow these steps to set up the 
 1. Clone the project repository to your local machine using Git
 2. Open the project in Visual Studio.
 3. Restore the NuGet packages by right-clicking on the solution in the Solution Explorer and selecting "Restore NuGet Packages."
+4. Open the Package Manager Console by going to Tools > NuGet Package Manager > Package Manager Console.
+5. Run the following command to update the database: "Update-Database".
+6. Run the project by pressing F5 or using the start icon on the toolbar.
 
+The Online Library Management System should now be running on your local machine. 
+
+## Features
+1. Add, update, and delete book records: Administrators can add new book records to the database, update existing records, and delete records that are no longer needed.
+
+2. Add, update, and delete users: Administrators can add new users to the database, update the information for existing users, and delete users that are no longer needed.
+
+3. Responsive design: The application is designed to be responsive and adapt to different screen sizes, making it easy to use on desktop and mobile devices.
 ## Previews
 
 ### Book Inventory Page
@@ -39,4 +50,9 @@ Once you have the required software installed, follow these steps to set up the 
 
 
 ![image](https://user-images.githubusercontent.com/92548627/209511774-258e9c98-2f88-4f14-a925-55f87e48e4ff.png)
+
+Thank you for using the Online Library Management System! If you have any questions or issues, please feel free to contact me on Naol.Bullo@outlook.com.
+
+
+
 
