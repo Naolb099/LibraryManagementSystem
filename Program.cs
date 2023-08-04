@@ -26,7 +26,7 @@ namespace LibraryManagementSystem
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+// asas
             app.UseRouting();
 
             app.UseAuthorization();
