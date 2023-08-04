@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'msdocs-core-sql-naol'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BD337ECE78474D52BE01D59991E53D7B }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1930C70D637E40ED9DB6FB402A95E44D }}
           package: .
